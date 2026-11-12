@@ -1,0 +1,734 @@
+*
+*  Written: 25-Aug-2026 18:50:19*
+*
+BEGIN$DEF fibre_c1_type
+ type='KNOB'
+ version='V10.0'
+END$DEF fibre_c1_type
+*
+BEGIN$DEF fibre_c1_krige_parms
+ alt_rot_alpha=' '
+ alt_rot_beta=' '
+ alt_rot_zeta=' '
+ alt_sd_major_search=' '
+ alt_sd_minor_search=' '
+ alt_sd_semi_search=' '
+ avg_discretize='N'
+ box_search='N'
+ dh_limit=3.000000000000
+ est_dh_max=10.000000000000
+ est_dh_min=1.000000000000
+ hy_field='FIBRE_CONC'
+ hy_limit=4.000000000000
+ hy_major=50.000000000000
+ hy_minor=30.000000000000
+ hy_semi=40.000000000000
+ i_search='O'
+ is_alt_rot_alpha='N'
+ is_alt_rot_beta='N'
+ is_alt_rot_zeta='N'
+ is_alt_sd_major_search='N'
+ is_alt_sd_minor_search='N'
+ is_alt_sd_semi_search='N'
+ is_std_rot_alpha='Y'
+ is_std_rot_beta='Y'
+ is_std_rot_zeta='Y'
+ is_std_sd_major_search='Y'
+ is_std_sd_minor_search='Y'
+ is_std_sd_semi_search='Y'
+ krige_mean=0.000000000000
+ lmvar=' '
+ major_search=100.000000000000
+ max_sam_oct=4.000000000000
+ max_samples=16.000000000000
+ min_num_oct=1.000000000000
+ min_sam_oct=1.000000000000
+ min_samples=10.000000000000
+ minor_search=60.000000000000
+ oct_search_plus='N'
+ oct_search_type='E'
+ parent='P'
+ parent_block_x=2.500000000000
+ parent_block_y=10.000000000000
+ parent_block_z=2.500000000000
+ parent_x_var=' '
+ parent_y_var=' '
+ parent_z_var=' '
+ read_parent_size='N'
+ rot_alpha=235.000000000000
+ rot_beta=-40.000000000000
+ rot_zeta=-20.000000000000
+ sel_by_cart_dist='N'
+ semi_search=75.000000000000
+ tol_duplicates=0.000000000000
+ use_dh_limit='Y'
+ use_est_limit='N'
+ use_hy_limit='Y'
+ use_key_sample_limits='N'
+ use_z_limits='N'
+ user_parent_size='Y'
+ x_disc_pnts=2.000000000000
+ y_disc_pnts=5.000000000000
+ z_disc_pnts=2.000000000000
+END$DEF fibre_c1_krige_parms
+*
+BEGIN$DEF fibre_c1_str_cutoff_mn
+ mj_str_1_range=154.000000000000
+ mj_str_2_range=204.000000000000
+ mn_str_1_range=64.000000000000
+ mn_str_2_range=120.000000000000
+ nugget=0.016000000000
+ num_struct=2.000000000000
+ sm_str_1_range=74.000000000000
+ sm_str_2_range=156.000000000000
+ str_1_diff_sill=0.617800000000
+ str_1_rot_alpha=237.208000000000
+ str_1_rot_beta=-40.893000000000
+ str_1_rot_zeta=-20.705000000000
+ str_2_diff_sill=0.366100000000
+ str_2_rot_alpha=237.208000000000
+ str_2_rot_beta=-40.893000000000
+ str_2_rot_zeta=-20.705000000000
+ NO_use_bm_variables
+ var_type_1=1.000000000000
+ var_type_2=1.000000000000
+END$DEF fibre_c1_str_cutoff_mn
+*
+BEGIN$DEF fibre_c1_data_format
+ amount_order_corrections=' '
+ amount_order_corrections_default=' '
+ aniso_distance=' '
+ aniso_w_distance=' '
+ avg_distance_default=0.000000000000
+ block_variance=' '
+ block_variance_default=' '
+ cart_distance=' '
+ cart_w_distance=' '
+ cross_db=' '
+ cross_dhid=' '
+ cross_save_smp_name='N'
+ cross_smp_from_fld=' '
+ cross_smp_name_fld=' '
+ cross_smp_to_fld=' '
+ datasheet='MAP'
+ default=-1.000000000000
+ description=' '
+ dist_c_an=' '
+ dist_c_an_default=' '
+ dist_c_ca=' '
+ dist_c_ca_default=' '
+ environment='MC'
+ extra_var=0.000000000000
+ flag_default=-99.000000000000
+ flag_value=1.000000000000
+ flag_variable='run_flag_conc'
+ grade_c_an=' '
+ grade_c_an_default=' '
+ grade_c_ca=' '
+ grade_c_ca_default=' '
+ h_field='DHID'
+ identifier='COMP_1M_FIBRE_CONC'
+ input_var_1='FIBRE_CONC'
+ ivd_distance=' '
+ ivd_w_distance=' '
+ keys='COMP'
+ kriging_efficiency=' '
+ kriging_efficiency_default=' '
+ lagrange_default=' '
+ lagrangian=' '
+ max_weight=' '
+ max_weight_default=' '
+ min_samples_1=4.000000000000
+ min_valid_1=0.000000000000
+ minimum_weight='minwt_conc'
+ minimum_weight_default=-99.000000000000
+ num_holes='n_holes_conc'
+ num_holes_default=-99.000000000000
+ num_samples='n_samples_conc'
+ num_samples_default=-99.000000000000
+ octants_coded=' '
+ octants_used=' '
+ output_default_1=-11221.000000000000
+ output_var_1='fibre_conc'
+ project='MEC'
+ sample_coeff=' '
+ sample_coeff_default=' '
+ sample_grade_diff=' '
+ sample_grade_diff_default=' '
+ sample_mean=' '
+ sample_mean_default=' '
+ sample_stddev=' '
+ sample_stddev_default=' '
+ sample_variance=' '
+ sample_variance_default=' '
+ samples_file='meccomp_1m_fibre_conc.map'
+ sg_field=' '
+ slope_of_regression='sor_conc'
+ slope_of_regression_default=-99.000000000000
+ sum_neg_wt=' '
+ sum_neg_wt_default=' '
+ sum_pos_wt=' '
+ sum_pos_wt_default=' '
+ sum_wt=' '
+ sum_wt_default=' '
+ use_cross_dhid='N'
+ use_cross_validation='N'
+ variable='fibre_conc'
+ variable_default=-1431.000000000000
+ variance='kvar_conc'
+ variance_default=-99.000000000000
+ w_field='FIBRE_CONC'
+ wt_mean=' '
+ wt_mean_default=' '
+ x_field='MIDX'
+ y_field='MIDY'
+ z_field='MIDZ'
+ zero_missing_1='N'
+END$DEF fibre_c1_data_format
+*
+BEGIN$DEF fibre_c1_postik
+ grade_over=' '
+ grade_under=' '
+ hyperbolic='N'
+ ikmean=' '
+ ikvariance=' '
+ ivtype=0.000000000000
+ ltpar=1.000000000000
+ max_disc=20.000000000000
+ mpar=1.000000000000
+ prob=0.000000000000
+ prob_for_value=' '
+ total_grade=' '
+ utpar=10.000000000000
+ value_for_prob=' '
+ varred=1.000000000000
+ zmax=100.000000000000
+ zmin=0.000000000000
+ zvalue=0.000000000000
+END$DEF fibre_c1_postik
+*
+BEGIN$DEF fibre_c1_tetra
+END$DEF fibre_c1_tetra
+*
+BEGIN$DEF fibre_c1_data_domain
+ s_field=' '
+ BEGIN$TAB select_criteria
+   '0.01&2.5'
+   '0&100'
+ END$TAB select_criteria
+ BEGIN$TAB select_fields
+   'LENGTH'
+   'FIBRE_CONC'
+ END$TAB select_fields
+ specific_w=143.000000000000
+ w_field='GEOCOD'
+END$DEF fibre_c1_data_domain
+*
+BEGIN$DEF fibre_c1_block_match
+ condition='domain_fibre eq 143'
+END$DEF fibre_c1_block_match
+*
+BEGIN$DEF fibre_c1_block_centroid
+ alt_centroid_x=' '
+ alt_centroid_y=' '
+ alt_centroid_z=' '
+ is_alt_block_centroid='N'
+ is_alt_centroid_x='N'
+ is_alt_centroid_y='N'
+ is_alt_centroid_z='N'
+END$DEF fibre_c1_block_centroid
+*
+BEGIN$DEF fibre_c1_soft_bound
+ n_bound=0.000000000000
+ soft_field=' '
+END$DEF fibre_c1_soft_bound
+*
+BEGIN$DEF fibre_c2_type
+ type='KNOB'
+ version='V10.0'
+END$DEF fibre_c2_type
+*
+BEGIN$DEF fibre_c2_krige_parms
+ alt_rot_alpha=' '
+ alt_rot_beta=' '
+ alt_rot_zeta=' '
+ alt_sd_major_search=' '
+ alt_sd_minor_search=' '
+ alt_sd_semi_search=' '
+ avg_discretize='N'
+ box_search='N'
+ dh_limit=4.000000000000
+ est_dh_max=10.000000000000
+ est_dh_min=1.000000000000
+ hy_field='FIBRE_CONC'
+ hy_limit=6.000000000000
+ hy_major=60.000000000000
+ hy_minor=40.000000000000
+ hy_semi=50.000000000000
+ i_search='O'
+ is_alt_rot_alpha='N'
+ is_alt_rot_beta='N'
+ is_alt_rot_zeta='N'
+ is_alt_sd_major_search='N'
+ is_alt_sd_minor_search='N'
+ is_alt_sd_semi_search='N'
+ is_std_rot_alpha='Y'
+ is_std_rot_beta='Y'
+ is_std_rot_zeta='Y'
+ is_std_sd_major_search='Y'
+ is_std_sd_minor_search='Y'
+ is_std_sd_semi_search='Y'
+ krige_mean=0.000000000000
+ lmvar=' '
+ major_search=310.000000000000
+ max_sam_oct=4.000000000000
+ max_samples=16.000000000000
+ min_num_oct=1.000000000000
+ min_sam_oct=1.000000000000
+ min_samples=8.000000000000
+ minor_search=180.000000000000
+ oct_search_plus='N'
+ oct_search_type='E'
+ parent='P'
+ parent_block_x=2.500000000000
+ parent_block_y=10.000000000000
+ parent_block_z=2.500000000000
+ parent_x_var=' '
+ parent_y_var=' '
+ parent_z_var=' '
+ read_parent_size='N'
+ rot_alpha=235.000000000000
+ rot_beta=-40.000000000000
+ rot_zeta=-20.000000000000
+ sel_by_cart_dist='N'
+ semi_search=230.000000000000
+ tol_duplicates=0.000000000000
+ use_dh_limit='Y'
+ use_est_limit='N'
+ use_hy_limit='Y'
+ use_key_sample_limits='N'
+ use_z_limits='N'
+ user_parent_size='Y'
+ x_disc_pnts=2.000000000000
+ y_disc_pnts=5.000000000000
+ z_disc_pnts=2.000000000000
+END$DEF fibre_c2_krige_parms
+*
+BEGIN$DEF fibre_c2_str_cutoff_mn
+ mj_str_1_range=154.000000000000
+ mj_str_2_range=204.000000000000
+ mn_str_1_range=64.000000000000
+ mn_str_2_range=120.000000000000
+ nugget=0.016000000000
+ num_struct=2.000000000000
+ sm_str_1_range=74.000000000000
+ sm_str_2_range=156.000000000000
+ str_1_diff_sill=0.617800000000
+ str_1_rot_alpha=237.208000000000
+ str_1_rot_beta=-40.893000000000
+ str_1_rot_zeta=-20.705000000000
+ str_2_diff_sill=0.366100000000
+ str_2_rot_alpha=237.208000000000
+ str_2_rot_beta=-40.893000000000
+ str_2_rot_zeta=-20.705000000000
+ NO_use_bm_variables
+ var_type_1=1.000000000000
+ var_type_2=1.000000000000
+END$DEF fibre_c2_str_cutoff_mn
+*
+BEGIN$DEF fibre_c2_data_format
+ amount_order_corrections=' '
+ amount_order_corrections_default=' '
+ aniso_distance=' '
+ aniso_w_distance=' '
+ avg_distance_default=0.000000000000
+ block_variance=' '
+ block_variance_default=' '
+ cart_distance=' '
+ cart_w_distance=' '
+ cross_db=' '
+ cross_dhid=' '
+ cross_save_smp_name='N'
+ cross_smp_from_fld=' '
+ cross_smp_name_fld=' '
+ cross_smp_to_fld=' '
+ datasheet='MAP'
+ default=-1.000000000000
+ description=' '
+ dist_c_an=' '
+ dist_c_an_default=' '
+ dist_c_ca=' '
+ dist_c_ca_default=' '
+ environment='MC'
+ extra_var=0.000000000000
+ flag_default=-99.000000000000
+ flag_value=2.000000000000
+ flag_variable='run_flag_conc'
+ grade_c_an=' '
+ grade_c_an_default=' '
+ grade_c_ca=' '
+ grade_c_ca_default=' '
+ h_field='DHID'
+ identifier='COMP_1M_FIBRE_CONC'
+ input_var_1='FIBRE_CONC'
+ ivd_distance=' '
+ ivd_w_distance=' '
+ keys='COMP'
+ kriging_efficiency=' '
+ kriging_efficiency_default=' '
+ lagrange_default=' '
+ lagrangian=' '
+ max_weight=' '
+ max_weight_default=' '
+ min_samples_1=1.000000000000
+ min_valid_1=0.000000000000
+ minimum_weight='minwt_conc'
+ minimum_weight_default=-99.000000000000
+ num_holes='n_holes_conc'
+ num_holes_default=-99.000000000000
+ num_samples='n_samples_conc'
+ num_samples_default=-99.000000000000
+ octants_coded=' '
+ octants_used=' '
+ output_default_1=-11222.000000000000
+ output_var_1='fibre_conc'
+ project='MEC'
+ sample_coeff=' '
+ sample_coeff_default=' '
+ sample_grade_diff=' '
+ sample_grade_diff_default=' '
+ sample_mean=' '
+ sample_mean_default=' '
+ sample_stddev=' '
+ sample_stddev_default=' '
+ sample_variance=' '
+ sample_variance_default=' '
+ samples_file='meccomp_1m_fibre_conc.map'
+ sg_field=' '
+ slope_of_regression='sor_conc'
+ slope_of_regression_default=-99.000000000000
+ sum_neg_wt=' '
+ sum_neg_wt_default=' '
+ sum_pos_wt=' '
+ sum_pos_wt_default=' '
+ sum_wt=' '
+ sum_wt_default=' '
+ use_cross_dhid='N'
+ use_cross_validation='N'
+ variable='fibre_conc'
+ variable_default=-1432.000000000000
+ variance='kvar_conc'
+ variance_default=-99.000000000000
+ w_field='FIBRE_CONC'
+ wt_mean=' '
+ wt_mean_default=' '
+ x_field='MIDX'
+ y_field='MIDY'
+ z_field='MIDZ'
+ zero_missing_1='N'
+END$DEF fibre_c2_data_format
+*
+BEGIN$DEF fibre_c2_postik
+ grade_over=' '
+ grade_under=' '
+ hyperbolic='N'
+ ikmean=' '
+ ikvariance=' '
+ ivtype=0.000000000000
+ ltpar=1.000000000000
+ max_disc=20.000000000000
+ mpar=1.000000000000
+ prob=0.000000000000
+ prob_for_value=' '
+ total_grade=' '
+ utpar=10.000000000000
+ value_for_prob=' '
+ varred=1.000000000000
+ zmax=100.000000000000
+ zmin=0.000000000000
+ zvalue=0.000000000000
+END$DEF fibre_c2_postik
+*
+BEGIN$DEF fibre_c2_tetra
+END$DEF fibre_c2_tetra
+*
+BEGIN$DEF fibre_c2_data_domain
+ s_field=' '
+ BEGIN$TAB select_criteria
+   '0.01&2.5'
+   '0&100'
+ END$TAB select_criteria
+ BEGIN$TAB select_fields
+   'LENGTH'
+   'FIBRE_CONC'
+ END$TAB select_fields
+ specific_w=143.000000000000
+ w_field='GEOCOD'
+END$DEF fibre_c2_data_domain
+*
+BEGIN$DEF fibre_c2_block_match
+ condition='fibre_conc eq -1431'
+END$DEF fibre_c2_block_match
+*
+BEGIN$DEF fibre_c2_block_centroid
+ alt_centroid_x=' '
+ alt_centroid_y=' '
+ alt_centroid_z=' '
+ is_alt_block_centroid='N'
+ is_alt_centroid_x='N'
+ is_alt_centroid_y='N'
+ is_alt_centroid_z='N'
+END$DEF fibre_c2_block_centroid
+*
+BEGIN$DEF fibre_c2_soft_bound
+ n_bound=0.000000000000
+ soft_field=' '
+END$DEF fibre_c2_soft_bound
+*
+BEGIN$DEF fibre_c3_type
+ type='KNOB'
+ version='V10.0'
+END$DEF fibre_c3_type
+*
+BEGIN$DEF fibre_c3_krige_parms
+ alt_rot_alpha=' '
+ alt_rot_beta=' '
+ alt_rot_zeta=' '
+ alt_sd_major_search=' '
+ alt_sd_minor_search=' '
+ alt_sd_semi_search=' '
+ avg_discretize='N'
+ box_search='N'
+ dh_limit=6.000000000000
+ est_dh_max=10.000000000000
+ est_dh_min=1.000000000000
+ hy_field='FIBRE_CONC'
+ hy_limit=8.000000000000
+ hy_major=70.000000000000
+ hy_minor=50.000000000000
+ hy_semi=60.000000000000
+ i_search='O'
+ is_alt_rot_alpha='N'
+ is_alt_rot_beta='N'
+ is_alt_rot_zeta='N'
+ is_alt_sd_major_search='N'
+ is_alt_sd_minor_search='N'
+ is_alt_sd_semi_search='N'
+ is_std_rot_alpha='Y'
+ is_std_rot_beta='Y'
+ is_std_rot_zeta='Y'
+ is_std_sd_major_search='Y'
+ is_std_sd_minor_search='Y'
+ is_std_sd_semi_search='Y'
+ krige_mean=0.000000000000
+ lmvar=' '
+ major_search=620.000000000000
+ max_sam_oct=6.000000000000
+ max_samples=20.000000000000
+ min_num_oct=1.000000000000
+ min_sam_oct=1.000000000000
+ min_samples=4.000000000000
+ minor_search=360.000000000000
+ oct_search_plus='N'
+ oct_search_type='E'
+ parent='P'
+ parent_block_x=2.500000000000
+ parent_block_y=10.000000000000
+ parent_block_z=2.500000000000
+ parent_x_var=' '
+ parent_y_var=' '
+ parent_z_var=' '
+ read_parent_size='N'
+ rot_alpha=235.000000000000
+ rot_beta=-40.000000000000
+ rot_zeta=-20.000000000000
+ sel_by_cart_dist='N'
+ semi_search=460.000000000000
+ tol_duplicates=0.000000000000
+ use_dh_limit='Y'
+ use_est_limit='N'
+ use_hy_limit='Y'
+ use_key_sample_limits='N'
+ use_z_limits='N'
+ user_parent_size='Y'
+ x_disc_pnts=2.000000000000
+ y_disc_pnts=5.000000000000
+ z_disc_pnts=2.000000000000
+END$DEF fibre_c3_krige_parms
+*
+BEGIN$DEF fibre_c3_str_cutoff_mn
+ mj_str_1_range=154.000000000000
+ mj_str_2_range=204.000000000000
+ mn_str_1_range=64.000000000000
+ mn_str_2_range=120.000000000000
+ nugget=0.016000000000
+ num_struct=2.000000000000
+ sm_str_1_range=74.000000000000
+ sm_str_2_range=156.000000000000
+ str_1_diff_sill=0.617800000000
+ str_1_rot_alpha=237.208000000000
+ str_1_rot_beta=-40.893000000000
+ str_1_rot_zeta=-20.705000000000
+ str_2_diff_sill=0.366100000000
+ str_2_rot_alpha=237.208000000000
+ str_2_rot_beta=-40.893000000000
+ str_2_rot_zeta=-20.705000000000
+ NO_use_bm_variables
+ var_type_1=1.000000000000
+ var_type_2=1.000000000000
+END$DEF fibre_c3_str_cutoff_mn
+*
+BEGIN$DEF fibre_c3_data_format
+ amount_order_corrections=' '
+ amount_order_corrections_default=' '
+ aniso_distance=' '
+ aniso_w_distance=' '
+ avg_distance_default=0.000000000000
+ block_variance=' '
+ block_variance_default=' '
+ cart_distance=' '
+ cart_w_distance=' '
+ cross_db=' '
+ cross_dhid=' '
+ cross_save_smp_name='N'
+ cross_smp_from_fld=' '
+ cross_smp_name_fld=' '
+ cross_smp_to_fld=' '
+ datasheet='MAP'
+ default=-1.000000000000
+ description=' '
+ dist_c_an=' '
+ dist_c_an_default=' '
+ dist_c_ca=' '
+ dist_c_ca_default=' '
+ environment='MC'
+ extra_var=0.000000000000
+ flag_default=-99.000000000000
+ flag_value=3.000000000000
+ flag_variable='run_flag_conc'
+ grade_c_an=' '
+ grade_c_an_default=' '
+ grade_c_ca=' '
+ grade_c_ca_default=' '
+ h_field='DHID'
+ identifier='COMP_1M_FIBRE_CONC'
+ input_var_1='FIBRE_CONC'
+ ivd_distance=' '
+ ivd_w_distance=' '
+ keys='COMP'
+ kriging_efficiency=' '
+ kriging_efficiency_default=' '
+ lagrange_default=' '
+ lagrangian=' '
+ max_weight=' '
+ max_weight_default=' '
+ min_samples_1=1.000000000000
+ min_valid_1=0.000000000000
+ minimum_weight='minwt_conc'
+ minimum_weight_default=-99.000000000000
+ num_holes='n_holes_conc'
+ num_holes_default=-99.000000000000
+ num_samples='n_samples_conc'
+ num_samples_default=-99.000000000000
+ octants_coded=' '
+ octants_used=' '
+ output_default_1=-11223.000000000000
+ output_var_1='fibre_conc'
+ project='MEC'
+ sample_coeff=' '
+ sample_coeff_default=' '
+ sample_grade_diff=' '
+ sample_grade_diff_default=' '
+ sample_mean=' '
+ sample_mean_default=' '
+ sample_stddev=' '
+ sample_stddev_default=' '
+ sample_variance=' '
+ sample_variance_default=' '
+ samples_file='meccomp_1m_fibre_conc.map'
+ sg_field=' '
+ slope_of_regression='sor_conc'
+ slope_of_regression_default=-99.000000000000
+ sum_neg_wt=' '
+ sum_neg_wt_default=' '
+ sum_pos_wt=' '
+ sum_pos_wt_default=' '
+ sum_wt=' '
+ sum_wt_default=' '
+ use_cross_dhid='N'
+ use_cross_validation='N'
+ variable='fibre_conc'
+ variable_default=-1433.000000000000
+ variance='kvar_conc'
+ variance_default=-99.000000000000
+ w_field='FIBRE_CONC'
+ wt_mean=' '
+ wt_mean_default=' '
+ x_field='MIDX'
+ y_field='MIDY'
+ z_field='MIDZ'
+ zero_missing_1='N'
+END$DEF fibre_c3_data_format
+*
+BEGIN$DEF fibre_c3_postik
+ grade_over=' '
+ grade_under=' '
+ hyperbolic='N'
+ ikmean=' '
+ ikvariance=' '
+ ivtype=0.000000000000
+ ltpar=1.000000000000
+ max_disc=20.000000000000
+ mpar=1.000000000000
+ prob=0.000000000000
+ prob_for_value=' '
+ total_grade=' '
+ utpar=10.000000000000
+ value_for_prob=' '
+ varred=1.000000000000
+ zmax=100.000000000000
+ zmin=0.000000000000
+ zvalue=0.000000000000
+END$DEF fibre_c3_postik
+*
+BEGIN$DEF fibre_c3_tetra
+END$DEF fibre_c3_tetra
+*
+BEGIN$DEF fibre_c3_data_domain
+ s_field=' '
+ BEGIN$TAB select_criteria
+   '0.01&2.5'
+   '0&100'
+ END$TAB select_criteria
+ BEGIN$TAB select_fields
+   'LENGTH'
+   'FIBRE_CONC'
+ END$TAB select_fields
+ specific_w=143.000000000000
+ w_field='GEOCOD'
+END$DEF fibre_c3_data_domain
+*
+BEGIN$DEF fibre_c3_block_match
+ condition='fibre_conc eq -1432'
+END$DEF fibre_c3_block_match
+*
+BEGIN$DEF fibre_c3_block_centroid
+ alt_centroid_x=' '
+ alt_centroid_y=' '
+ alt_centroid_z=' '
+ is_alt_block_centroid='N'
+ is_alt_centroid_x='N'
+ is_alt_centroid_y='N'
+ is_alt_centroid_z='N'
+END$DEF fibre_c3_block_centroid
+*
+BEGIN$DEF fibre_c3_soft_bound
+ n_bound=0.000000000000
+ soft_field=' '
+END$DEF fibre_c3_soft_bound
+*
+BEGIN$DEF editor_defaults
+ block_model_file='Test.bmf'
+ last_view='estimation_id,tp_type,df_variable,df_variable_default,store_num_samples,df_num_samples,df_num_samples_default,store_num_holes,df_num_holes,df_num_holes_default,store_flag_variable,df_flag_variable,df_flag_default,df_flag_value,store_variance,df_variance,df_variance_default,store_lagrange,df_block_variance,df_block_variance_default,store_kriging_efficiency,df_kriging_efficiency,df_kriging_efficiency_default,store_minimum_weight,df_minimum_weight,df_minimum_weight_default,store_slope_of_regression,df_slope_of_regression,df_slope_of_regression_default,store_weight_of_mean,store_sum_of_negative_weights,df_sum_of_negative_weights,df_sum_of_negative_weights_default,kp_parent,kp_user_parent_size,kp_parent_block_x,kp_parent_block_y,kp_parent_block_z,df_avg_distance_default,kp_rot_alpha,kp_rot_zeta,kp_rot_beta,kp_major_search,kp_semi_search,kp_minor_search,use_tetra,tetra_name,key_sample_limit_list_max_samples_1,kp_x_disc_pnts,kp_y_disc_pnts,kp_z_disc_pnts,kp_min_samples,kp_max_samples,kp_i_search,kp_max_sam_oct,kp_oct_search_type,kp_tol_duplicates,ord_nugget,ord_structures_count,ord_var_type_1,ord_str_1_diff_sill,ord_str_1_rot_alpha,ord_str_1_rot_zeta,ord_str_1_rot_beta,ord_mj_str_1_range,ord_sm_str_1_range,ord_mn_str_1_range,pi_probs_grid,pi_interval_sample_data,samples_file,df_keys,df_x_field,df_y_field,df_z_field,df_w_field,use_numeric,dd_w_field,use_specific_w,dd_specific_w,use_character,dd_s_field,use_specific_string,dd_specific_string,use_ignore_string,dd_ignore_string,use_solids,use_fields,dd_fields,kp_use_hy_limit,kp_hy_field,kp_hy_limit,kp_hy_major,kp_hy_semi,kp_hy_minor,kp_hy_use_angles,kp_hy_bearing,kp_hy_plunge,kp_hy_dip,specify_cut_values,df_upper_cut_value,kp_use_dh_limit,kp_dh_limit,kp_use_z_limits,kp_z_above,kp_z_below,use_condition,bm_condition,extra_multivar,df_input_var_1FRST,df_min_valid_1FRST,df_min_samples_1FRST,df_zero_missing_1FRST,df_output_var_1FRST,df_output_default_1FRST,extra_est_var_count,df_input_var_1,df_min_valid_1,df_min_samples_1,df_zero_missing_1,df_output_var_1,df_output_default_1'
+END$DEF editor_defaults
+END$FILE
